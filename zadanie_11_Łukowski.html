@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <h1>Kod HTML </h1>
+    <textarea rows="46" cols="132">
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #result {
+            color: green;
+            font-size: 43px;
+        }
+    </style>
+    <title>
+        Kalkulator sekund
+    </title>
+</head>
+<body>
 
+<h2>Obliczanie różnicy czasu między dwoma dniami stycznia</h2>
+
+<p>Podaj pierwszy dzień (D1_gier):</p>
+<input id="D1_mazu" type="number" min="1" max="31">
+
+<p>Podaj drugi dzień (D2_gier):</p>
+<input id="D2_mazu" type="number" min="1" max="31">
+
+<button onclick="calculate()">Oblicz</button>
+
+<p id="result"></p>
+
+<script>
+    function calculate() {
+        var D1_mazu = document.getElementById("D1_mazu").value;
+        var D2_mazu = document.getElementById("D2_mazu").value;
+
+        var date1 = new Date(2024, 0, D1_mazu);
+        var date2 = new Date(2024, 0, D2_mazu);
+
+        var differenceInSeconds = Math.abs(date2 - date1) / 1000;
+
+        document.getElementById("result").innerHTML = "Różnica czasu między dniami wynosi: " + differenceInSeconds + " sekund.";
+    }
+</script>
+
+</body>
+</html>
+    </textarea>
