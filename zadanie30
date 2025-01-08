@@ -1,0 +1,26 @@
+<html>
+ <head>
+ <script type="text/javascript">
+ var dom = {
+wysokość: '5m',
+kolor: 'Szary',
+powierzchnia: '100m^2',
+pokaz: function ()
+{
+ document.write(this.wysokość + ' ' + this.kolor+ ' ' +this.powierzchnia)
+ }
+}
+dom.pokaz();
+ </script>
+ </head>
+<body>
+<br>
+ Programowanie obiektowe. <br>
+ Obiekt to dom<br>
+ Pola:<br>
+ wysokość<br>
+ kolor<br>
+ powierzchnia<br>
+ metoda: pokaz<br>
+</body>
+</html>
