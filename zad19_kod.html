@@ -1,1 +1,50 @@
+<html>
+<head>
+ <meta charset="UTF-8">
+ <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+<script type="text/javascript">
+ function pole() {
+    var a = parseFloat(document.getElementById('dlugosc').value);
+    var b = a * a;
+    document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b.toFixed(2) + " cm^2";
+ }
+
+ function obwod() {
+    var a = parseFloat(document.getElementById('dlugosc').value);
+    var b = 4 * a;
+    document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b.toFixed(2) + " cm";
+ }
+
+ function pokazKod() {
+    var kod = `
+    function pole() {
+        var a = parseFloat(document.getElementById('dlugosc').value);
+        var b = a * a;
+        document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b.toFixed(2) + " cm^2";
+    }
+
+    function obwod() {
+        var a = parseFloat(document.getElementById('dlugosc').value);
+        var b = 4 * a;
+        document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b.toFixed(2) + " cm";
+    }
+    `;
+    document.getElementById('kodTextarea').value = kod;
+ }
+</script>
+
+ <h1>Wszystko o KWADRACIE</h1><br><br>
+ Podaj długość boku: <input type="text" id="dlugosc" placeholder="podaj długość"> cm<br><br><br>
+ <input type="button" name="pole" value="Oblicz pole" onclick="pole()"><br><br>
+ <input type="button" name="obwod" value="Oblicz obwód" onclick="obwod()"><br><br>
+ <div style="color:red;font-size:50px;" id="nazwa"></div>
+
+ <h2>Kod programu</h2>
+ <input type="button" value="Pokaż kod" onclick="pokazKod()"><br><br>
+ <textarea id="kodTextarea" rows="15" cols="80" readonly style="font-family: monospace;"></textarea>
+
+</body>
+</html>
 
