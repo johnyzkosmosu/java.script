@@ -1,1 +1,72 @@
+<html>
+<head>
+<title>Przykład obliczenia V i Pc walca - Łukowski</title>
+<script language="JavaScript">
+function V(r, h) {
+    r_liczba = parseFloat(r);
+    h_liczba = parseFloat(h);
+    V_wynik = Math.PI * r_liczba * r_liczba * h_liczba;
+    document.getElementsByName('obj')[0].value = V_wynik.toFixed(2); // na dokument
+    alert("V=" + V_wynik.toFixed(2) + " cm^3"); // do okna Alert
+    pokaz1.innerHTML = "V=" + V_wynik.toFixed(2) + " cm^3" + "<br>"; // do tabeli
+}
+
+function Pc(r, h) {
+    r_liczba = parseFloat(r);
+    h_liczba = parseFloat(h);
+    Pc_wynik = 2 * Math.PI * r_liczba * r_liczba + 2 * Math.PI * r_liczba * h_liczba;
+    document.getElementsByName('pole')[0].value = Pc_wynik.toFixed(2);
+    alert("Pc=" + Pc_wynik.toFixed(2) + " cm^2");
+    pokaz2.innerHTML = "Pc=" + Pc_wynik.toFixed(2) + " cm^2";
+}
+
+function pokazKod() {
+    var kod = `
+function V(r, h) {
+    r_liczba = parseFloat(r);
+    h_liczba = parseFloat(h);
+    V_wynik = Math.PI * r_liczba * r_liczba * h_liczba;
+    document.getElementsByName('obj')[0].value = V_wynik.toFixed(2); // na dokument
+    alert("V=" + V_wynik.toFixed(2) + " cm^3"); // do okna Alert
+    pokaz1.innerHTML = "V=" + V_wynik.toFixed(2) + " cm^3" + "<br>"; // do tabeli
+}
+
+function Pc(r, h) {
+    r_liczba = parseFloat(r);
+    h_liczba = parseFloat(h);
+    Pc_wynik = 2 * Math.PI * r_liczba * r_liczba + 2 * Math.PI * r_liczba * h_liczba;
+    document.getElementsByName('pole')[0].value = Pc_wynik.toFixed(2);
+    alert("Pc=" + Pc_wynik.toFixed(2) + " cm^2");
+    pokaz2.innerHTML = "Pc=" + Pc_wynik.toFixed(2) + " cm^2";
+}
+    `;
+    document.getElementById('kodTextarea').value = kod;
+}
+</script>
+</head>
+
+<body>
+<h2>Obliczanie objętości (V) i pola powierzchni całkowitej (Pc) walca</h2>
+
+<form name="formularz" action="..." onsubmit="V(this.promien.value,this.wysokosc.value); Pc(this.promien.value,this.wysokosc.value); return false;">
+    Podaj r: <input size="6" name="promien">
+    Podaj h: <input size="6" name="wysokosc">
+    <br><br>
+    <input type="submit" value="Oblicz">
+    <br><br>
+    V: <input size="6" name="obj"> cm³
+    Pc: <input size="6" name="pole"> cm²
+</form>
+
+<table>
+    <tr id="pokaz1"></tr>
+    <tr id="pokaz2"></tr>
+</table>
+
+<h3>Wyświetl kod źródłowy</h3>
+<input type="button" value="Pokaż kod JavaScript" onclick="pokazKod()"><br><br>
+<textarea id="kodTextarea" rows="20" cols="80" readonly style="font-family: monospace;"></textarea>
+
+</body>
+</html>
 
