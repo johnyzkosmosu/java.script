@@ -1,1 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 20 - Kod</title>
+</head>
+<body>
+    <h1>Kod JavaScript do obliczania długości boków trójkąta</h1>
 
+    <pre>
+function AB_łuk(xa, ya, xb, yb) {
+    return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+}
+
+function BC_łuk(xb, yb, xc, yc) {
+    return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+}
+
+function AC_łuk(xa, ya, xc, yc) {
+    return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+}
+
+function obliczDlugosci() {
+    var xa_luk = parseFloat(document.getElementById('xa_luk').value);
+    var ya_luk = parseFloat(document.getElementById('ya_luk').value);
+    var xb_luk = parseFloat(document.getElementById('xb_luk').value);
+    var yb_luk = parseFloat(document.getElementById('yb_luk').value);
+    var xc_luk = parseFloat(document.getElementById('xc_luk').value);
+    var yc_luk = parseFloat(document.getElementById('yc_luk').value);
+
+    var dlugosc_AB = AB_łuk(xa_luk, ya_luk, xb_luk, yb_luk).toFixed(2);
+    var dlugosc_BC = BC_łuk(xb_luk, yb_luk, xc_luk, yc_luk).toFixed(2);
+    var dlugosc_AC = AC_łuk(xa_luk, ya_luk, xc_luk, yc_luk).toFixed(2);
+
+    document.getElementById('wynik_AB').innerText = dlugosc_AB;
+    document.getElementById('wynik_BC').innerText = dlugosc_BC;
+    document.getElementById('wynik_AC').innerText = dlugosc_AC;
+}
+    </pre>
+</body>
+</html>
