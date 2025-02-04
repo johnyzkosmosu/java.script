@@ -2,22 +2,46 @@
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <title>Zadanie 17 - Kod</title>
-    <style>
-        .wyroznienieCzerwone {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
+    <title>Zadanie 17 - Teoria</title>
 </head>
 <body>
+    <h1><u><b>1. Wymień cztery sposoby wyprowadzania danych w JS:</b></u></h1>
+    <p><b>- z użyciem document.write()</b></p>
+    <p><b>- z użyciem okienka alert()</b></p>
+    <p><b>- do okienek formularza</b></p>
+    <p><b>- do tabeli</b></p>
 
-    <div id="nazwa"></div>
+    <h1><u><b>2. Czym jest funkcja w JS?</b></u></h1>
+    <p><b>- Jest to zbiór zgrupowanych instrukcji, które możemy uruchamiać poprzez podanie ich nazwy.</b></p>
+    <p><b>- Każda funkcja po wywołaniu wykonuje swój wewnętrzny kod.</b></p>
+    <p><b>- Funkcja może mieć argumenty, które są przetwarzane wewnątrz funkcji.</b></p>
+    <p><b>- Może zwrócić wartość przy użyciu słowa kluczowego return.</b></p>
 
-    <script>
-        document.getElementById("nazwa").innerHTML = "Witaj!";
-        document.getElementById("nazwa").className = "wyroznienieCzerwone";
-    </script>
+    <h1><u><b>3. Omów metody getElementsByName, getElementById, getElementByTagName:</b></u></h1>
+    <table border="1">
+        <tr>
+            <th>Metoda</th>
+            <th>Opis</th>
+        </tr>
+        <tr>
+            <td><b>getElementById("id")</b></td>
+            <td>Dostęp do elementu o konkretnej wartości atrybutu id.</td>
+        </tr>
+        <tr>
+            <td><b>getElementsByName("nazwa")</b></td>
+            <td>Dostęp do elementów o konkretnej wartości atrybutu name.</td>
+        </tr>
+        <tr>
+            <td><b>getElementsByTagName("znacznik")</b></td>
+            <td>Dostęp do elementów o typie znacznika, np. P lub DIV.</td>
+        </tr>
+    </table>
 
+    <h1><u><b>4. Omów właściwości innerHTML, innerText, className:</b></u></h1>
+    <p><b>innerHTML</b> – umożliwia odczyt, modyfikowanie, wstawianie lub usuwanie kodu HTML z elementu.</p>
+    <p><b>innerText</b> – umożliwia określenie ciągu znaków, który zostanie umieszczony w elemencie.</p>
+    <p><b>className</b> – umożliwia określenie klasy CSS użytej do prezentacji elementu.</p>
+
+    <a href="zadanie17_kow.html">Powrót do Zadania 13</a>
 </body>
 </html>
