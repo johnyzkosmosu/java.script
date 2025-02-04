@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 18 - Łukowski </title>
+</head>
+<body>
+    <h1>Kod JavaScript dla Zadania 18</h1>
+
+    <pre style="background-color: #f4f4f4; padding: 20px; border-radius: 10px; font-size: 18px;">
+// Funkcja do sumowania
+function suma_kow(a, b) {
+    return a + b;
+}
+
+// Funkcja do odejmowania
+function odejmowanie_kow(a, b) {
+    return a - b;
+}
+
+// Funkcja do mnożenia
+function mnozenie_kow(a, b) {
+    return a * b;
+}
+
+// Funkcja do podnoszenia obu liczb do kwadratu
+function od_kwadratu_kow(a, b) {
+    return "A² = " + Math.pow(a, 2) + ", B² = " + Math.pow(b, 2);
+}
+
+// Funkcja do obliczania reszty z dzielenia A przez B
+function reszta_z_dzielenia_a_przez_b_kow(a, b) {
+    if (b === 0) {
+        return "Nie można dzielić przez 0!";
+    }
+    return a % b;
+}
+
+// Funkcja wywołująca wszystkie powyższe funkcje
+function wykonajOperacje() {
+    var a = parseFloat(document.getElementById('a').value);
+    var b = parseFloat(document.getElementById('b').value);
+
+    document.getElementById('wynik_suma').innerText = suma_kow(a, b);
+    document.getElementById('wynik_odejmowanie').innerText = odejmowanie_kow(a, b);
+    document.getElementById('wynik_mnozenie').innerText = mnozenie_kow(a, b);
+    document.getElementById('wynik_kwadrat').innerText = od_kwadratu_kow(a, b);
+    document.getElementById('wynik_reszta').innerText = reszta_z_dzielenia_a_przez_b_kow(a, b);
+}
+    </pre>
+</body>
+</html>
 
