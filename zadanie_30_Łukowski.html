@@ -1,1 +1,95 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Obiekt DOM - Łukowski</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+    }
+    .wynik {
+      margin-top: 20px;
+      padding: 15px;
+      border: 1px solid #ccc;
+      background-color: #f9f9f9;
+      white-space: pre-wrap;
+      font-family: Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Programowanie obiektowe - DOM - Łukowski</h1>
+
+<!-- PRZYCISKI -->
+<button onclick="pokazZadanie()">Pokaż treść zadania</button>
+<button onclick="pokazKod()">Pokaż kod programu</button>
+<button onclick="uruchomProgram()">Uruchom program</button>
+
+<!-- MIEJSCE NA WYŚWIETLENIE -->
+<div id="wynik" class="wynik"></div>
+
+<script>
+function pokazZadanie() {
+  const tekst = `
+Treść zadania:
+
+Zdefiniuj obiekt: Dom
+Właściwości: wysokosc, kolor, liczbaOkien
+Metoda: Dom_wyswietl_Łukowski()
+
+Program ma:
+- wyświetlić nazwę obiektu
+- wypisać wszystkie właściwości
+- wypisać nazwę metody
+  `;
+  document.getElementById("wynik").innerText = tekst;
+}
+
+function pokazKod() {
+  const kod = `
+let Dom = {
+  wysokosc: "8 metrów",
+  kolor: "Biały",
+  liczbaOkien: 10,
+  Dom_wyswietl_Łukowski: function() {
+    return "Obiekt: Dom\\n" +
+           "Wysokość: " + this.wysokosc + "\\n" +
+           "Kolor: " + this.kolor + "\\n" +
+           "Liczba okien: " + this.liczbaOkien + "\\n" +
+           "Metoda: Dom_wyswietl_Łukowski()";
+  }
+};
+
+document.getElementById("wynik").innerText = Dom.Dom_wyswietl_Łukowski();
+  `;
+  document.getElementById("wynik").innerText = kod;
+}
+
+function uruchomProgram() {
+  let Dom = {
+    wysokosc: "8 metrów",
+    kolor: "Biały",
+    liczbaOkien: 10,
+    Dom_wyswietl_Łukowski: function() {
+      return "Obiekt: Dom\n" +
+             "Wysokość: " + this.wysokosc + "\n" +
+             "Kolor: " + this.kolor + "\n" +
+             "Liczba okien: " + this.liczbaOkien + "\n" +
+             "Metoda: Dom_wyswietl_Łukowski()";
+    }
+  };
+
+  document.getElementById("wynik").innerText = Dom.Dom_wyswietl_Łukowski();
+}
+</script>
+
+</body>
+</html>
 
