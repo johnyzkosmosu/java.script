@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie-28 Łukowski</title>
+</head>
+<body>
+
+<h1>Pytania i odpowiedzi z programowania</h1>
+
+<button onclick="pokaz()">Pokaż odpowiedzi</button>
+
+<div id="odpowiedzi"></div>
+
+<script>
+function pokaz() {
+  document.getElementById("odpowiedzi").innerHTML = `
+    <h2>1. Rodzaje „filozofii” programowania</h2>
+    <p>- Strukturalne<br>
+       - Obiektowe<br>
+       - Funkcyjne<br>
+       - Deklaratywne<br>
+       - Logiczne</p>
+
+    <h2>2. Programowanie strukturalne</h2>
+    <p>Podział programu na funkcje, pętle i warunki. Bez instrukcji skoku. Łatwiejsze do czytania.</p>
+
+    <h2>3. Programowanie obiektowe</h2>
+    <p>OOP - Object Oriented Programming<br>
+       Obiekty mają stan (właściwości) i zachowanie (metody).<br>
+       Program opiera się na klasach i obiektach.<br><br>
+       <b>Polimorfizm:</b> Różne obiekty mogą mieć tę samą metodę z innym działaniem.</p>
+
+    <h2>4. Dlaczego używamy OOP?</h2>
+    <p>Ułatwia pisanie, porządkowanie i ponowne użycie kodu.</p>
+
+    <h2>5. Pojęcia:</h2>
+    <p><b>Klasa:</b> Szablon obiektu<br>
+       <b>Obiekt:</b> Rzecz stworzona z klasy<br>
+       <b>Właściwość:</b> Cecha obiektu (np. kolor)<br>
+       <b>Metoda:</b> Co obiekt potrafi (np. mówi)<br>
+       <b>Konstruktor:</b> Tworzy nowy obiekt<br>
+       <b>Dziedziczenie:</b> Klasa może używać rzeczy z innej klasy<br>
+       <b>Hermetyzacja:</b> Ukrywanie danych w obiekcie</p>
+  `;
+}
+</script>
+
+</body>
+</html>
