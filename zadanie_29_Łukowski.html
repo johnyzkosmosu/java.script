@@ -1,1 +1,73 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zadanie-29 Łukowski</title>
+</head>
+<body>
 
+<h1>Pytania i odpowiedzi</h1>
+
+<script>
+// 1. Jak określić właściwość obiektu (2 sposoby)
+document.write("<h1>1. Określanie właściwości obiektu</h1>");
+document.write("<p>Sposób 1: kropka -> obiekt.nazwa<br>");
+document.write("Przykład: osoba.imie = 'Jan';</p>");
+document.write("<p>Sposób 2: nawiasy kwadratowe -> obiekt['nazwa']<br>");
+document.write("Przykład: osoba['wiek'] = 30;</p>");
+
+// 2. Odwołanie się do pól i metod
+document.write("<h1>2. Odwołanie do pól i metod</h1>");
+document.write("<p>Do pola: obiekt.pole lub obiekt['pole']<br>");
+document.write("Do metody: obiekt.metoda()</p>");
+
+// 3. Cechy konstruktora
+document.write("<h1>3. Cechy konstruktora</h1>");
+document.write("<p>- Funkcja tworząca nowe obiekty<br>");
+document.write("- Nazwa z dużej litery<br>");
+document.write("- Używa się z 'new'</p>");
+
+// 4. Tworzenie obiektu z polami i metodą
+document.write("<h1>4. Obiekt z 3 polami i 1 metodą</h1>");
+let auto = {
+  marka: "Toyota",
+  kolor: "Czerwony",
+  rok: 2020,
+  info: function() {
+    return this.marka + " " + this.kolor + " " + this.rok;
+  }
+};
+document.write("<p>" + auto.info() + "</p>");
+
+// 5. Znaczenie this
+document.write("<h1>5. Znaczenie słowa this</h1>");
+document.write("<p><b>this</b> odnosi się do bieżącego obiektu.<br>");
+document.write("Pola i metody oddzielamy przecinkami w obiekcie.</p>");
+
+// 6. Konstruktor w JS - przykład
+document.write("<h1>6. Konstruktor w JS - przykład</h1>");
+function Osoba(imie, wiek) {
+  this.imie = imie;
+  this.wiek = wiek;
+  this.przedstaw = function() {
+    return 'Cześć, mam na imię ' + this.imie + ' i mam ' + this.wiek + ' lat.';
+  }
+}
+let jan = new Osoba("Jan", 25);
+document.write("<p>" + jan.przedstaw() + "</p>");
+
+// 7. Znaczenie słowa new
+document.write("<h1>7. Znaczenie słowa new</h1>");
+document.write("<p><b>new</b> tworzy nowy obiekt z konstruktora.<br>");
+document.write("Przykład: let osoba = new Osoba('Anna', 30);</p>");
+
+// 8. Znaczenie prototype
+document.write("<h1>8. Znaczenie prototype</h1>");
+Osoba.prototype.kraj = "Polska";
+document.write("<p><b>prototype</b> pozwala dodać nowe właściwości lub metody do wszystkich obiektów danego typu.<br>");
+document.write("Przykład: Osoba.prototype.kraj = 'Polska';<br>");
+document.write("jan.kraj = " + jan.kraj + "</p>");
+</script>
+
+</body>
+</html>
