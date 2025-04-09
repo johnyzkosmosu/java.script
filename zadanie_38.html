@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Zadanie-38</title>
+</head>
+<body bgcolor="silver">
+<font color="green" size="8">
+
+Moje nazwisko to: Łukowski<br>
+liczba1_łuk=6<br>
+liczba2_łuk=6+7=13<br>
+liczba3_łuk=8<br>
+liczba4_łuk=8+4=12
+</font>
+<br><br>
+	
+<body bgcolor="silver">
+<font color="red" size="8">
+------------MENU------------<br>
+6- wyświetlanie teorii o operatorach logicznych<br>
+28- sprawdzanie czy liczba należy do przedziału (od 6 ; do 13]<br>
+56- sprawdzanie czy liczba należy do przedziału (-oo; 8) lub [12 ;+oo)<br>
+</font>
+
+
+
+<script>
+    var opcja_koz = prompt("Wybierz opcję: 6, 28 lub 56");
+	
+    if (opcja_koz == 6) {
+        document.write("<font color=blue size=8>Jesteś w opcja 6</font><br>");
+        document.write("<font color=green size=8>Teoria && i x=3 y=4 (x<9 && y>2) wynik -->prawda<br>");
+        document.write("|| lub x=3 y=4 (x==8 || y==y) wynik -->fałsz<br>");
+        document.write("!zaprzeczenie x=3 y=4 !(x==y) wynik -->prawda</font>");
+	
+
+    } else if (opcja_koz == 28) {
+        document.write("<font color=green size=8 bgcolor=gray>Jesteś w opcja 28 --> przedział</font><br>");
+        var liczba1_łuk = prompt("Podaj liczbę=");
+        if (liczba1_łuk > 6 && liczba1_łuk <= 13) {
+        document.write("<font color=green size=8 bgcolor=gray>Liczba należy do przedziału</font>"); } 
+		else {
+        document.write("<font color=green size=8 bgcolor=gray>Liczba nie należy do przedziału</font>");	}
+	
+
+    } else if (opcja_łuk == 56) {
+        document.write("<font color=green size=8 bgcolor=gray>Jesteś w opcja 56 --> przedział</font><br>");
+        var liczba2_łuk = prompt("Podaj liczbę=");
+        if (liczba2_łuk < 8 || liczba2_łuk >= 12) {
+                document.write("<font color=green size=8 bgcolor=gray>Liczba należy do przedziału</font>"); } 
+	else {
+        document.write("<font color=green size=8 bgcolor=gray>Liczba nie należy do przedziału</font>"); }
+				
+    } else if ((opcja_łuk != 6) && (opcja_łuk != 28) && (opcja_łuk != 56)) {
+        document.write("<font color=red size=8>nie ma takiej opcji</font><br>"); }
+
+
+</script>
+</body>
+</html>
