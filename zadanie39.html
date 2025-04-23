@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Wybór Koloru</title>
+</head>
+<body>
+
+<h3 style="color:green;">MENU:</h3>
+<p style="color:red;">1- CZERWONY</p>
+<p style="color:blue;">2- NIEBIESKI</p>
+
+<input type="button" name="Łukowski" value="Oblicz" onclick="fun_łuk()" /> 
+  <script> 
+    function fun_łuk() { 
+      var x_łuk = prompt("Podaj kolor", ""); 
+        if(x_łuk == 1 || x_łuk.toLowerCase() == "czerwony") { 
+  document.write('<h1 style="color:red;">wczytałeś kolor czerwony</h1><br />'); } 
+        else if(x_łuk == 2 || x_łuk.toLowerCase() == "niebieski") { 
+  document.write('<h6 style="color:blue;">wczytałeś kolor niebieski </h6><br />'); 
+  } 
+  } 
+ </script> 
