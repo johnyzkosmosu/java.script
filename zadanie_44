@@ -1,1 +1,28 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 44 </title>
+</head>
+
+<body>
+    <div style="font-size:42px; color:green;">
+        <script>
+            var ilosc_łuk = 11;
+            var wielkosc_łuk = 42;
+            document.write("Ilość wykonania pętli = " + ilosc_łuk + "<br>");
+            document.write("Wielkość liter = " + wielkosc_łuk + "px<br><br>");
+
+            for (var i_łuk = 1; i_łuk <= ilosc_łuk; i_łuk++) {
+                if (i_łuk % 2 == 0)
+                    document.write(i_łuk + ". Jan<br>");
+                else
+                    document.write(i_łuk + ". Łukowski<br>");
+            }
+        </script>
+    </div>
+</body>
+
+</html>
