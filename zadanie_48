@@ -1,1 +1,22 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 48 -Łukowski</title>
+</head>
+
+<body>
+    <div style="font-size:20px; color:green;">
+        <script>
+            var suma_łuk = 0;
+            for (var i_łuk = 1; i_łuk <= 1000000; i_łuk++) {
+                suma_łuk = suma_łuk + 1 / i_łuk;
+            }
+            document.write("Suma szeregu harmonicznego od 1 do 1000000 wynosi: " + suma_łuk.toFixed(4));
+        </script>
+    </div>
+</body>
+
+</html>
