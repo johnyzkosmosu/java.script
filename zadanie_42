@@ -1,1 +1,20 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 42 </title>
+</head>
+
+<body>
+    <div style="color:red;font-size:50px;">
+        <script>
+            for (var i_łuk = 1; i_łuk <= 10; i_łuk++) {
+                document.write("Wyświetlam " + i_łuk + " raz – Łukowski<br>");
+            }
+        </script>
+    </div>
+</body>
+
+</html>
