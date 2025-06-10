@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Łukowski_Zadanie49</title>
+</head>
+<body>
+  <h2>Obliczanie silni – iteracyjnie</h2>
+  <label>Podaj liczbę n: </label>
+  <input type="number" id="n_luk">
+  <button onclick="obliczSilnie()">Oblicz silnię</button>
+  <p id="wynik"></p>
+
+  <script>
+    function obliczSilnie() {
+      let n_luk = parseInt(document.getElementById("n_luk").value);
+      let silnia_luk = 1;
+
+      if (n_luk === 0) {
+        silnia_luk = 1;
+      } else {
+        for (let i = 1; i <= n_luk; i++) {
+          silnia_luk *= i;
+        }
+      }
+
+      document.getElementById("wynik").textContent = n_luk + "! = " + silnia_luk;
+    }
+  </script>
+</body>
+</html>
