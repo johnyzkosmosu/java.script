@@ -1,1 +1,56 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_siejka() {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <textarea name="siejka" cols="80" rows="20" readonly>
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 56 - Łuk</title>
+</head>
+
+<body>
+    <div style="font-size:18px; color:black;">
+        <script>
+            function czyPierwsza_luk(n_luk) {
+                if (n_luk < 2) return false;
+                for (var dzielnik_luk = 2; dzielnik_luk <= Math.sqrt(n_luk); dzielnik_luk++) {
+                    if (n_luk % dzielnik_luk == 0) return false;
+                }
+                return true;
+            }
+
+            var licznik_luk = 0;
+            for (var i_luk = 0; i_luk <= 39; i_luk++) {
+                var w_luk = i_luk * i_luk + i_luk + 41;
+                if (czyPierwsza_luk(w_luk)) {
+                    document.write("i=" + i_luk + " w(" + i_luk + ")=" + w_luk + "<br>");
+                    licznik_luk++;
+                }
+                if (licznik_luk % 5 == 0 && licznik_luk !== 0) {
+                    confirm("Kliknij OK, aby kontynuować...");
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
+        </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+</body>
+
+</html>
 
