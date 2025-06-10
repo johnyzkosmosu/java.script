@@ -1,1 +1,48 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_siejka() {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <textarea name="siejka" cols="80" rows="20" readonly>
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 44 - Łukowski</title>
+</head>
+
+<body>
+    <div style="font-size:42px; color:green;">
+        <script>
+            var ilosc_luk = 11;
+            var wielkosc_luk = 42;
+            document.write("Ilość wykonania pętli = " + ilosc_luk + "<br>");
+            document.write("Wielkość liter = " + wielkosc_luk + "px<br><br>");
+
+            for (var i_luk = 1; i_luk <= ilosc_luk; i_luk++) {
+                if (i_luk % 2 == 0)
+                    document.write(i_luk + ". Bartosz<br>");
+                else
+                    document.write(i_luk + ". Łukowski<br>");
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
+        </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+</body>
+
+</html>
 
