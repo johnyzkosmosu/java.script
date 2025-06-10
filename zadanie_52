@@ -1,1 +1,39 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 52 - Łukowski</title>
+</head>
+
+<body>
+    <pre style="font-family: monospace; font-size: 16px; color: navy;">
+        <script>
+            var a_łuk = (5 % 4) + 5; // 6
+            var b_łuk = (7 % 6) + 20; // 21
+
+            // Górna krawędź
+            for (var i_łuk = 1; i_łuk <= b_łuk; i_łuk++) {
+                document.write("*");
+            }
+            document.write("<br>");
+
+            // Środek
+            for (var j_łuk = 1; j_łuk <= a_łuk - 2; j_łuk++) {
+                document.write("*");
+                for (var k_łuk = 1; k_łuk <= b_łuk - 2; k_łuk++) {
+                    document.write("&nbsp;");
+                }
+                document.write("*<br>");
+            }
+
+            // Dolna krawędź
+            for (var i_łuk = 1; i_łuk <= b_łuk; i_łuk++) {
+                document.write("*");
+            }
+        </script>
+    </pre>
+</body>
+
+</html>
