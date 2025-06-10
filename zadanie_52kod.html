@@ -1,1 +1,59 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_siejka() {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <textarea name="siejka" cols="80" rows="20" readonly>
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 52 - Łuk</title>
+</head>
+
+<body>
+    <pre style="font-family: monospace; font-size: 16px; color: navy;">
+        <script>
+            var a_luk = (5 % 4) + 5; // 6
+            var b_luk = (7 % 6) + 20; // 21
+
+            // Górna krawędź
+            for (var i_luk = 1; i_luk <= b_luk; i_luk++) {
+                document.write("*");
+            }
+            document.write("<br>");
+
+            // Środek
+            for (var j_luk = 1; j_luk <= a_luk - 2; j_luk++) {
+                document.write("*");
+                for (var k_luk = 1; k_luk <= b_luk - 2; k_luk++) {
+                    document.write("&nbsp;");
+                }
+                document.write("*<br>");
+            }
+
+            // Dolna krawędź
+            for (var i_luk = 1; i_luk <= b_luk; i_luk++) {
+                document.write("*");
+            }
+        </script>
+    </pre>
+</body>
+
+</html>
+
+        </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+</body>
+
+</html>
 
