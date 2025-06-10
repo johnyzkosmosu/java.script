@@ -1,1 +1,49 @@
 
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_siejka() {
+            window.close()
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <textarea name="siejka" cols="80" rows="20" readonly>
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 46 - Łukowski</title>
+</head>
+
+<body>
+    <div style="color:red; font-size:40px;">
+        <script>
+            var h_luk, a_luk;
+
+            do {
+                h_luk = parseFloat(prompt("Podaj wysokość h:", ""));
+            } while (h_luk <= 0);
+
+            do {
+                a_luk = parseFloat(prompt("Podaj podstawę a:", ""));
+            } while (!(a_luk > 0));
+
+            var pole_luk = (a_luk * h_luk) / 2;
+            document.write("Pole trójkąta = " + pole_luk.toFixed(2) + " cm²<br>");
+        </script>
+    </div>
+</body>
+
+</html>
+
+        </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+</body>
+
+</html>
