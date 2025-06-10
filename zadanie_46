@@ -1,1 +1,29 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 46-Łukowski</title>
+</head>
+
+<body>
+    <div style="color:red; font-size:40px;">
+        <script>
+            var h_łuk, a_łuk;
+
+            do {
+                h_łuk = parseFloat(prompt("Podaj wysokość h:", ""));
+            } while (h_łuk <= 0);
+
+            do {
+                a_łuk = parseFloat(prompt("Podaj podstawę a:", ""));
+            } while (!(a_łuk > 0));
+
+            var pole_łuk = (a_łuk * h_łuk) / 2;
+            document.write("Pole trójkąta = " + pole_łuk.toFixed(2) + " cm²<br>");
+        </script>
+    </div>
+</body>
+
+</html>
