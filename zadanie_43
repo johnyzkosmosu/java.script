@@ -1,1 +1,24 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 43 - Łukowski</title>
+</head>
+
+<body>
+    <div style="color:blue; font-size:30px;">
+        <script>
+            var koniec_petli_łuk = prompt("Podaj liczbę końcową:", "");
+            koniec_petli_łuk = parseInt(koniec_petli_łuk);
+            for (var i_łuk = 2; i_łuk <= koniec_petli_łuk; i_łuk++) {
+                if (i_łuk % 2 == 0) {
+                    document.write(i_łuk + "<br>");
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
