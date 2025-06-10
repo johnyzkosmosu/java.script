@@ -1,31 +1,28 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Zadanie 56 - Łukowski</title>
+    <meta charset="UTF-8" />
+    <title>Zadanie 57 - Łuk</title>
 </head>
 
 <body>
     <div style="font-size:18px; color:black;">
         <script>
-            function czyPierwsza_łuk(n_łuk) {
-                if (n_łuk < 2) return false;
-                for (var dzielnik_łuk = 2; dzielnik_łuk <= Math.sqrt(n_łuk); dzielnik_łuk++) {
-                    if (n_łuk % dzielnik_łuk == 0) return false;
-                }
-                return true;
-            }
+            var nr_w_dzienniku = 19; // ustawiony numer w dzienniku na 19
+            var licznik_luk = 0;
 
-            var licznik_łuk = 0;
-            for (var i_łuk = 0; i_łuk <= 39; i_łuk++) {
-                var w_łuk = i_łuk * i_łuk + i_łuk + 41;
-                if (czyPierwsza_łuk(w_łuk)) {
-                    document.write("i=" + i_łuk + " w(" + i_łuk + ")=" + w_łuk + "<br>");
-                    licznik_łuk++;
-                }
-                if (licznik_łuk % 5 == 0 && licznik_łuk !== 0) {
+            for (var i_luk = nr_w_dzienniku; i_luk <= nr_w_dzienniku + 15; i_luk++) {
+                var pierw2_luk = Math.sqrt(i_luk);
+                var pierw4_luk = Math.sqrt(pierw2_luk);
+
+                document.write("i=" + i_luk +
+                    " pierw_2(" + i_luk + ")=" + pierw2_luk.toFixed(2) +
+                    " pierw_4(" + i_luk + ")=" + pierw4_luk.toFixed(2) + "<br>");
+
+                licznik_luk++;
+
+                if (licznik_luk % 3 === 0) {
                     confirm("Kliknij OK, aby kontynuować...");
                 }
             }
@@ -34,4 +31,3 @@
 </body>
 
 </html>
-
