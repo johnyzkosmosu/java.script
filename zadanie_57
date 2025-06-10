@@ -1,1 +1,31 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 57 - łukowski</title>
+</head>
+
+<body>
+    <div style="font-size:18px; color:black;">
+        <script>
+            var licznik_łuk = 0;
+            for (var i_łuk = 15; i_łuk <= 30; i_łuk++) {
+                var pierw2_łuk = Math.sqrt(i_łuk);
+                var pierw4_łuk = Math.sqrt(pierw2_łuk);
+
+                document.write("i=" + i_łuk +
+                    " pierw_2(" + i_łuk + ")=" + pierw2_łuk.toFixed(2) +
+                    " pierw_4(" + i_łuk + ")=" + pierw4_łuk.toFixed(2) + "<br>");
+                licznik_łuk++;
+
+                if (licznik_łuk % 3 === 0) {
+                    confirm("Kliknij OK, aby kontynuować...");
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
