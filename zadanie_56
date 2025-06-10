@@ -1,1 +1,37 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 56 - Łukowski</title>
+</head>
+
+<body>
+    <div style="font-size:18px; color:black;">
+        <script>
+            function czyPierwsza_łuk(n_łuk) {
+                if (n_łuk < 2) return false;
+                for (var dzielnik_łuk = 2; dzielnik_łuk <= Math.sqrt(n_łuk); dzielnik_łuk++) {
+                    if (n_łuk % dzielnik_łuk == 0) return false;
+                }
+                return true;
+            }
+
+            var licznik_łuk = 0;
+            for (var i_łuk = 0; i_łuk <= 39; i_łuk++) {
+                var w_łuk = i_łuk * i_łuk + i_łuk + 41;
+                if (czyPierwsza_łuk(w_łuk)) {
+                    document.write("i=" + i_łuk + " w(" + i_łuk + ")=" + w_łuk + "<br>");
+                    licznik_łuk++;
+                }
+                if (licznik_łuk % 5 == 0 && licznik_łuk !== 0) {
+                    confirm("Kliknij OK, aby kontynuować...");
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
