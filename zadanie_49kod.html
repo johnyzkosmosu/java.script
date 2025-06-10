@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Łukowski_Zadanie49_KOD</title>
+</head>
+<body>
+  <h2>Kod źródłowy zadania 49 – Łukowski</h2>
+  <pre>
+&lt;label&gt;Podaj liczbę n: &lt;/label&gt;
+&lt;input type="number" id="n_luk"&gt;
+&lt;button onclick="obliczSilnie()"&gt;Oblicz silnię&lt;/button&gt;
+&lt;p id="wynik"&gt;&lt;/p&gt;
+
+&lt;script&gt;
+function obliczSilnie() {
+  let n_luk = parseInt(document.getElementById("n_luk").value);
+  let silnia_luk = 1;
+
+  if (n_luk === 0) {
+    silnia_luk = 1;
+  } else {
+    for (let i = 1; i <= n_luk; i++) {
+      silnia_luk *= i;
+    }
+  }
+
+  document.getElementById("wynik").textContent = n_luk + "! = " + silnia_luk;
+}
+&lt;/script&gt;
+  </pre>
+</body>
+</html>
