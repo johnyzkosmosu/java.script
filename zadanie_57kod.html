@@ -1,1 +1,52 @@
+<html>
+
+<head>
+    <script type="text/javascript">
+        function okno_zamknij_siejka() {
+            window.close()
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <textarea name="siejka" cols="80" rows="20" readonly>
+
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 57 - Łuk</title>
+</head>
+
+<body>
+    <div style="font-size:18px; color:black;">
+        <script>
+            var licznik_luk = 0;
+            for (var i_luk = 15; i_luk <= 30; i_luk++) {
+                var pierw2_luk = Math.sqrt(i_luk);
+                var pierw4_luk = Math.sqrt(pierw2_luk);
+
+                document.write("i=" + i_luk +
+                    " pierw_2(" + i_luk + ")=" + pierw2_luk.toFixed(2) +
+                    " pierw_4(" + i_luk + ")=" + pierw4_luk.toFixed(2) + "<br>");
+                licznik_luk++;
+
+                if (licznik_luk % 3 === 0) {
+                    confirm("Kliknij OK, aby kontynuować...");
+                }
+            }
+        </script>
+    </div>
+</body>
+
+</html>
+
+        </textarea>
+    </form>
+    <input type="button" value="zamknij okno" onclick="okno_zamknij_siejka()" />
+</body>
+
+</html>
 
