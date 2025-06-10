@@ -1,1 +1,31 @@
 
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 47 - Łukowski</title>
+</head>
+
+<body>
+    <div style="color:blue; font-size:35px;">
+        <script>
+            var a_łuk, b_łuk, c_łuk;
+            do {
+                a_łuk = parseFloat(prompt("Podaj bok a:", ""));
+                b_łuk = parseFloat(prompt("Podaj bok b:", ""));
+                c_łuk = parseFloat(prompt("Podaj bok c:", ""));
+            } while (
+                !(a_łuk > 0 && b_łuk > 0 && c_łuk > 0 &&
+                    a_łuk + b_łuk > c_łuk &&
+                    a_łuk + c_łuk > b_łuk &&
+                    b_łuk + c_łuk > a_łuk)
+            );
+
+            document.write("Boki tworzą trójkąt: a=" + a_łuk + ", b=" + b_łuk + ", c=" + c_łuk + "<br>");
+        </script>
+    </div>
+</body>
+
+</html>
+
